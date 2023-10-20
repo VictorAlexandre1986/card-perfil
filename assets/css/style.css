@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+}
+
+.slide-container{
+    max-width: 1120px;
+    width:100%;
+    background-color: grey;
+    padding:2.5rem;
+}
+
+.slide-content{
+    margin: 0 2.4rem;
+}
+
+.card-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    width: 250px;
+    border-radius: 1.6rem;
+    background-color: #fff;
+    margin: 1rem;
+}
+
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem 1rem;
+}
+
+.image-content{
+    position:relative;
+    row-gap: 0.4rem;
+    padding: 1.6rem 0;
+}
+
+.overlay{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+    border-radius: 25px 25px 0 25px;
+}
+
+/*Faz a curva da direita da parte inferior azul*/
+.overlay::before,
+.overlay::after{
+    content:'' ;
+    position:absolute;
+    right:0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070f4;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+
+
+
+.card-image{
+    position:relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070f4;
+}
+
+.name{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.description{
+    margin-top:1.5rem;
+    font-size: 0.9rem;
+    color:#707070;
+    text-align: center;
+}
+
+.button{
+    border:none;
+    font-size: 1rem;
+    color:#fff;
+    padding: 0.5rem 1rem;
+    background-color: #4070f4;
+    border-radius: 0.5rem;
+    margin: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover{
+    background-color: #265df2;
+}
